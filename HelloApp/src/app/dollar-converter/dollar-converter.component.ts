@@ -15,14 +15,11 @@ export class DollarConverterComponent {
   currency: string = ''
   @Input()
   rate: number  = 1
-
-  n: number = 0
+ 
 
   convert() {
 
-    this.n = this.amount * this.rate
-
-    return this.n
+    return (this.amount * this.rate).toFixed(2);
   }
 
 }
